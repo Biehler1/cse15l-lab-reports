@@ -21,4 +21,5 @@ The same thing happened when my working directory was /home/lecture1/messages; d
 This is an error, since cd changes the working directory. Therefore, since files aren't a directory, we cannot go into the file using "cd", therefore giving the error message saying that the given file isn't a directory.
 
 # ls:
-1. ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33b03ee6-b491-4922-9e06-bc0e71cf2d42)
+1.
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33b03ee6-b491-4922-9e06-bc0e71cf2d42)
