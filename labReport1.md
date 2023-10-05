@@ -28,15 +28,33 @@ When I ran ls with no arguments while my working directory was /home/ (nothing f
 This was not an error.
 
 2.
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/b5143792-3ef2-47ed-a952-e521cb2f8b54)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/a03c4df4-9dca-41c5-8f7b-764aa878d44c)
 The working directory was /home/.
-When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I ran "ls lecture1/messages", except this time since there were no directories present, only all of the files were printed out in regular text; it seems like files are represented as regular text, while directories are represented as bolded blue.
+When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I inputted multiple arguments (Ex: "ls lecture1 lecture1/messages), except this time it listed out all files/directories in both directories and it was categorized through the name of the directory (Ex: For the lecture1 directory it printed "lecture1" before listing out all of the files/directories). 
 This was not an error.
 
 3.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/0ae6c600-5f9d-4cde-b79f-ad448e0bc6a4)
-The working directory was /home/
+The working directory was /home/.
 When I ran ls with a file path as an argument (Ex: "ls lecture1/Hello.java" or "ls lecture1/messages/en-us.txt") all that was listed out in the terminal was the pathway that was inputed (Ex: "lecture1/Hello.java" and "lecture1/messages/en-us.txt" respectively). This was because the only files or directories present when giving the file path as an argument is that specific file, therefore all that is printned out is the file's path.
 This was not an error, since when I typed in "ls lecture1/nsald" (a nonexistant file) it gave an error message saying "ls: cannot access 'lecture/nsald': No such file or directory".
 
 ## cat:
+1.
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/a9e5b4f8-101f-4afd-99a2-de73ef0206e2)
+The working directory was /home/
+When I ran cat with no arguments (nothing following "cat" in the terminal) the terminal took in my inputs and printed them out exactly the same afterwards (Ex: "Hello???" appears twice although I only typed it once). This appears to be an added functionality of cat for when no arguments are used.
+This was not an error.
+
+2.
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/c4de49cc-ed0f-4cfa-8da6-0d83853196f6)
+The working directory was /home/.
+When I ran cat with a directory argument (Ex: "cat lecture1" or "cat lecture1/messages"), it displayed an error message that stated `cat: lecture1: Is a directory` and `cat: lecture1/messages: Is a directory` respectively. The reason this happened was because cat is supposed to print out the text within a file, and since directories aren't files, it gives an error.
+This is an error, since cat prints out text within a file, and the path I was using led to a directory. As a result, it gave an error message saying that the given path used was a directory.
+
+3.
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/15d2cfc8-d99e-4680-9e78-f415c96105ae)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/77d36d28-e568-4c06-bb40-e92c2dc87a10)
+The working directory was /home/
+When I ran cat with a file argument (Ex: "cat lecture1/Hello.java" or "cat lecture1/messages/en-us.txt"), it printed out all of the text written inside the file into the terminal (Ex: For "cat lecture1/Hello.java" it printed out all of the code present in the file). Additionally, cat worked to concatenate multiple files together when two or more arguments were used together (Ex: "cat lecture1/Hello.java lecture1/messages/en-us.txt" printed out contents of both files).
+This was not an error. 
