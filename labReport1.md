@@ -5,7 +5,7 @@
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/27328f9b-5245-4b98-b844-da22a554b55f)
 The working directory was originally /home/.
 When I ran cd with no arguments with my working directory being /home/ (nothing following "cd" in the terminal) there wasn't any changed in my working directory, files, or terminal.
-However, it seems when I'm in another working directory (`[user@sahara ~/lecture1]`) through using "cd ____" (Ex: "cd lecture1") using just "cd" afterwards places my working directory in /home/.
+However, it seems when I'm in another working directory (Ex: `[user@sahara ~/lecture1]`) through using "cd ____" (Ex: "cd lecture1") using just "cd" afterwards places my working directory in /home/.
 This was not an error. 
 
 2.
@@ -24,20 +24,20 @@ This is an error, since cd changes the working directory. Therefore, since files
 1.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33b03ee6-b491-4922-9e06-bc0e71cf2d42)
 The working directory was /home/.
-When I ran ls with no arguments while my working directory was /home/ (nothing following "ls" in the terminal) it listed out the directory "lecture1" in blue. The reason for this, is because the only file or directory present in /home/ was "lecture1", therefore, when ls lists out all files and directories, only "lecture1" was listed out.
+When I ran ls with no arguments while my working directory was /home/ (nothing following "ls" in the terminal) it listed out the directory "lecture1" in blue. The reason for this, is because the only file or directory present in /home/ was the directory "lecture1", therefore, when ls lists out all files and directories, only "lecture1" was listed out.
 This was not an error.
 
 2.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/a03c4df4-9dca-41c5-8f7b-764aa878d44c)
 The working directory was /home/.
-When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I inputted multiple arguments (Ex: "ls lecture1 lecture1/messages), except this time it listed out all files/directories in both directories and it was categorized through the name of the directory (Ex: For the lecture1 directory it printed "lecture1" before listing out all of the files/directories). 
+When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I inputted multiple arguments (Ex: "ls lecture1 lecture1/messages), except this time it listed out all files and directories in both directories and it was categorized through the name of the directory (Ex: For the lecture1 directory it printed "lecture1" before listing out all of the files and directories). 
 This was not an error.
 
 3.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/0ae6c600-5f9d-4cde-b79f-ad448e0bc6a4)
 The working directory was /home/.
 When I ran ls with a file path as an argument (Ex: "ls lecture1/Hello.java" or "ls lecture1/messages/en-us.txt") all that was listed out in the terminal was the pathway that was inputed (Ex: "lecture1/Hello.java" and "lecture1/messages/en-us.txt" respectively). This was because the only files or directories present when giving the file path as an argument is that specific file, therefore all that is printned out is the file's path.
-This was not an error, since when I typed in "ls lecture1/nsald" (a nonexistant file) it gave an error message saying "ls: cannot access 'lecture/nsald': No such file or directory".
+This was not an error, since when I typed in "ls lecture1/nsald" (a nonexistent file) it gave an error message saying "ls: cannot access 'lecture/nsald': No such file or directory".
 
 ## cat:
 1.
