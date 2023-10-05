@@ -30,7 +30,7 @@ This was not an error.
 2.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/a03c4df4-9dca-41c5-8f7b-764aa878d44c)
 The working directory was /home/.
-When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I inputted multiple arguments (Ex: "ls lecture1 lecture1/messages), except this time it listed out all files and directories in both directories and it was categorized through the name of the directory (Ex: For the lecture1 directory it printed "lecture1" before listing out all of the files and directories). 
+When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I inputted multiple arguments (Ex: "ls lecture1 lecture1/messages), except this time it listed out all files and directories in both directories and was categorized through the name of the directory (Ex: For the lecture1 directory it printed "lecture1:" in the terminal before listing out all of the files and directories). 
 This was not an error.
 
 3.
