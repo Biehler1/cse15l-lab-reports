@@ -28,13 +28,13 @@ When I ran ls with no arguments while my working directory was /home/ (nothing f
 This was not an error.
 
 2.
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/4e253e06-1620-48f0-8304-de8cb8b030f6)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/b5143792-3ef2-47ed-a952-e521cb2f8b54)
 The working directory was /home/.
 When I ran ls with a directory argument (Ex: "ls lecture1"), it listed out all files (Hello.class, Hello.java, README) in regular text and directories (messages) in bolded blue. The same thing happened when I ran "ls lecture1/messages", except this time since there were no directories present, only all of the files were printed out in regular text; it seems like files are represented as regular text, while directories are represented as bolded blue.
 This was not an error.
 
 3.
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/5a306ee8-341a-4730-b5c8-801c51071a52)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/0ae6c600-5f9d-4cde-b79f-ad448e0bc6a4)
 The working directory was /home/
 When I ran ls with a file path as an argument (Ex: "ls lecture1/Hello.java" or "ls lecture1/messages/en-us.txt") all that was listed out in the terminal was the pathway that was inputed (Ex: "lecture1/Hello.java" and "lecture1/messages/en-us.txt" respectively). This was because the only files or directories present when giving the file path as an argument is that specific file, therefore all that is printned out is the file's path.
 This was not an error, since when I typed in "ls lecture1/nsald" (a nonexistant file) it gave an error message saying "ls: cannot access 'lecture/nsald': No such file or directory".
