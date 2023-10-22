@@ -3,7 +3,7 @@
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/b3c16f44-5f31-483d-9e0d-5d9f5b3368c8)
 
 2. 
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/caa37e1e-1eda-4e02-ab80-f24a1e8323f1)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/6fce9765-5576-473d-9501-458eee01f6d1)
 The methods that are being called are the handleRequest() method in the Handler class and the start() method in the Server.java file to create the server. The relavent arguments to the handleRequest() method is the URI url. Initially, the value of the ArrayList inputs is a blank ArrayList, String result has a blank string, and the array String[] parameters gets populated with 2 values, the url, and the String inputted after /add-message?s= (in this case "Hello"). The fields that change after this request is the ArrayList inputs, which adds the String "Hello", and the String result, and since there was only one input, it would be "1. Hello\n".
 
 3. 
