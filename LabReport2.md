@@ -1,3 +1,4 @@
+# Lab Report 2
 # Part 1
 1.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/b3c16f44-5f31-483d-9e0d-5d9f5b3368c8)
