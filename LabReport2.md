@@ -14,4 +14,13 @@ The methods that are being called are the handleRequest() method in the Handler 
 1.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33dd2693-307c-4811-8ea6-f368ccc6c6c5)
 
-The path is `\Users\mfbie\.ssh\id_rsa.pub`.
+The path is `\Users\mfbie\.ssh\id_rsa`.
+2. 
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/d630a8ef-61d7-4cb4-b1d5-68efff01c9b8)
+
+The path is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/authorized_keys`
+3.
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/4fd4b7f1-5c47-485b-9e30-dab26d1793c0)
+
+# Part 3
+Most of what I learned in the past 2 labs were how easy it was to create a server or connect virtually to a different computer. Before, I thought it was this complicated and daunting tast, needing external software or deep understanding of HTML to create a server, but through the labs, I've learned that you can easily create one just by writing a couple correct java files and running them. Although they won't be the prettiest servers, this groundwork will be helpful in making more complicated ones in the future. On the other hand, for remote access, I was surprised that all you needed was the terminal, one command, and the computer you wanted to connect to. As before, I thought that you needed external software, since the other, seemingly more common, ways to connect virtually via a VPN or to my Mom's work computer always used to use external software. Therefore, this makes me think that a lot of the things that seem extremely complicated in Computer Science might not be as hard as they seem, while many other tasks that may seem simple might be significantly harder than they might seem.
