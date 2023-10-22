@@ -13,4 +13,5 @@ The methods that are being called are the handleRequest() method in the Handler 
 # Part 2
 1.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33dd2693-307c-4811-8ea6-f368ccc6c6c5)
+
 The path is `\Users\mfbie\.ssh\id_rsa.pub`.
