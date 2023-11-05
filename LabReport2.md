@@ -14,15 +14,15 @@ The methods that are being called are the handleRequest() method in the Handler 
 # Part 2
 #1
 
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/33dd2693-307c-4811-8ea6-f368ccc6c6c5)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/853f0a76-c25a-4fe5-b28c-c4c81175c7ef)
 
 The path is `\Users\mfbie\.ssh\id_rsa`.
 
 #2
 
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/d630a8ef-61d7-4cb4-b1d5-68efff01c9b8)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/ea6a01dd-4840-4c0d-86d5-f4fc6d18180a)
 
-The path is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/authorized_keys`
+The path is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/id_rsa.pub`
 
 #3
 
