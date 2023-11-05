@@ -16,13 +16,13 @@ The methods that are being called are the handleRequest() method in the Handler 
 
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/97430382-1dc7-4f40-a4d4-4c51a8df76aa)
 
-The path is `/c/Users/mfbie/.ssh/id_rsa`.
+The absolute path to the private key is `/c/Users/mfbie/.ssh/id_rsa`.
 
 #2
 
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/f1ac0b35-d538-49c6-831a-012a9cfe539a)
 
-The path is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/id_rsa.pub`
+The abolsute path to the public key is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/id_rsa.pub`
 
 #3
 
