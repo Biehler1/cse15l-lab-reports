@@ -20,7 +20,7 @@ The path is `\Users\mfbie\.ssh\id_rsa`.
 
 #2
 
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/ea6a01dd-4840-4c0d-86d5-f4fc6d18180a)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/f1ac0b35-d538-49c6-831a-012a9cfe539a)
 
 The path is `/home/linux/ieng6/cs15lfa23/cs15lfa23ad/.ssh/id_rsa.pub`
 
