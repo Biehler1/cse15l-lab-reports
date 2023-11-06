@@ -60,6 +60,7 @@ Originally, the issue was that the original array (arr) was assigned values from
 The command we will be exploring is grep. All of the information gathered about grep comes from [https://www.geeksforgeeks.org/grep-command-in-unixlinux/#](https://www.geeksforgeeks.org/grep-command-in-unixlinux/#).
 
 1. grep -c
+
 Example 1:
 ```
 mfbie@mbiehler MINGW64 ~/.vscode/Coding Projects/CSE 15L/docsearch (main)
@@ -107,6 +108,7 @@ Explanation:
 The -c option seems to count the number of words in each file that contain the specific pattern (for example, in example 1, `./technical/911report/chapter-1.txt` would contain 16 instances of "planes", while in example 2, `./technical/government/Env_Prot_Agen/final.txt` would contain 26 instances of "environment"). This would be useful to see how many times a word or piece of code is used within individual files. 
 
 2. grep -l
+
 Example 1:
 ```
 mfbie@mbiehler MINGW64 ~/.vscode/Coding Projects/CSE 15L/docsearch (main)
@@ -141,6 +143,7 @@ Explanation:
 The -l option finds and returns all files that comtain the designated pattern (in this case being "Saddam" for all the txt files in the 911report directory and "alcohol" for all the txt files in the government directory and all of its subdirectories). This is useful when you want to find specific files that mentions a word or has a specific line of code, allowing significantly less manual searching.
 
 3. grep -e
+
 Example 1:
 ```
 mfbie@mbiehler MINGW64 ~/.vscode/Coding Projects/CSE 15L/docsearch (main)
@@ -173,6 +176,7 @@ Explanation:
 The -e option finds and returns all lines that contain the designated pattern (in this case "potassium" for all of the txt files in the plos directory and "sodium bicarbonate" for all of the txt files in the biomed directory) as well as the files each of the lines were found in. This would be useful to find specific lines that contain words/code and gaining context around how they are used, allowing you to better identify where to search. 
 
 #4. grep -C n (with n being a positive integer)
+
 Example 1:
 ```
 mfbie@mbiehler MINGW64 ~/.vscode/Coding Projects/CSE 15L/docsearch (main)
