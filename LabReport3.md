@@ -26,6 +26,7 @@ Bug: The bug that we are going to examine is the reversed() method from the Arra
 3. Symptom:
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/45a83193-a815-4fa2-a871-9b73f33ca9cc)
 4. Bug fix:
+
 Before:
 ```
   // Returns a *new* array with all the elements of the input array in reversed
