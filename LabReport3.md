@@ -24,7 +24,8 @@ Bug: The bug that we are going to examine is the reversed() method from the Arra
   }
 ```
 3. Symptom:
-![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/45a83193-a815-4fa2-a871-9b73f33ca9cc)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/2b4d6709-0f22-42b4-89d5-76c42f11338b)
+![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/37485306-20da-4618-8f18-64ebbd52dd5d)
 4. Bug fix:
 
 Before:
