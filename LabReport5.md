@@ -55,7 +55,9 @@ I believe the issue is related to a directory issue, since I can run the test ca
 2. __TA Response:__ Hi, you're right that this is an issue with the JUnit tests not running. I can't really help right now until I see more of your directory stucture. More specifically, I want to see what is in the grading-area directory.
 
 __Student Response:__ Here is my directory structure: 
+
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/c890baeb-0fcc-4ce5-865f-2db67018e67e)
+
 Let me know if you need anymore information!
 
 __TA Response:__ It seems like there is an issue with reaching the `lib` folder in order to run the JUnit test. In order to reach it, you can either `cp` the `lib` folder into `grading-area`, or make it so the `CPATH` variables check the previous directory for the `lib` folder (using `..`).
