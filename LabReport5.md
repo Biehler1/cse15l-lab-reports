@@ -408,11 +408,7 @@ class ExecExamples {
 ```
 
 ## Part 2
-I think something cool that we learned was about the jdb. This is because back when I took AP Computer Science Principles in High School, the website (code.org) we coded on had a built in debugger that would go line by line through the code. In this 
-debugger you could implement "watchers" which would store the values of any variable you wanted and would show if and when they got updated in the code. It made debugging a lot easier. However, when I got to AP Computer Science A, this debugger 
-wasn't present at all, and I thought that it was just a thing that code.org had implemented themselves and not something built into some coding languages. I thought this for 2 years straight until we started to learn about jdb in this class.
-Therefore, just due to prior experience, and understanding how useful a debugger is when trying to fix code, I thought it was really cool that Java, C, and C++ have their own built in debugger, which also (most likely) implies that other popular
-coding languages also contain a built in debugger. 
+I think something cool that we learned was about the jdb. This is because back when I took AP Computer Science Principles in High School, the website (code.org) we coded on had a built in debugger that would go line by line through the code. In this debugger you could implement "watchers" which would store the values of any variable you wanted and would show if and when they got updated in the code. It made debugging a lot easier. However, when I got to AP Computer Science A, this debugger wasn't present at all, and I thought that it was just a thing that code.org had implemented themselves and not something built into some coding languages. I thought this for 2 years straight until we started to learn about jdb in this class. Therefore, just due to prior experience, and understanding how useful a debugger is when trying to fix code, I thought it was really cool that Java, C, and C++ have their own built in debugger, which also (most likely) implies that other popular coding languages also contain a built in debugger. It was also good to know that most of these debuggers carried the same functionality as those in Computer Science Principles, with the main useful thing being able to check local variables at the time when the code either throws an exception or gives an error.
 
 
 
