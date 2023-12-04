@@ -1,8 +1,8 @@
 # Lab Report 5
 ## Part 1
-1. __Title:__ Bug involving JUnit tests
+1.__Title:__ Bug involving JUnit tests
 
-I'm facing an issue when running my bash script. It outputs these errors in the terminal. I think this has to do with the JUnit tests not running.+
+I'm facing an issue when running my bash script. It outputs these errors in the terminal. I think this has to do with the JUnit tests not running.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/53ac9b25-5a9c-4dcd-b2c6-936ec59ed4aa)
 Here is the code for my bash script:
 ```
@@ -52,7 +52,7 @@ fi
 ```
 I believe the error is related to a directory issue, since I can run the test cases by itself just fine from the terminal.
 
-2. __TA Response:__ Hi, you're right that this is an issue with the JUnit tests not running. I can't really help right now until I see more of your directory stucture. More specifically, I want to see what is in the grading-area directory.
+2.__TA Response:__ Hi, you're right that this is an issue with the JUnit tests not running. I can't really help right now until I see more of your directory stucture. More specifically, I want to see what is in the grading-area directory.
 
 __Student Response:__ Here is my directory structure: 
 
@@ -62,7 +62,7 @@ Let me know if you need anymore information!
 
 __TA Response:__ It seems like there is an issue with reaching the `lib` folder in order to run the JUnit test. In order to reach it, you can `cp` the `lib` folder into `grading-area`.
 
-3. __Student Response:__ I tried what you recommended with using `cp` to copy the `lib` folder into `grading-area`, but it still gave an error:
+3.__Student Response:__ I tried what you recommended with using `cp` to copy the `lib` folder into `grading-area`, but it still gave an error:
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/af882fc6-e125-453d-8c19-3ad8b4c592ea)
 The only line I added was `cp lib grading-area/`.
 
@@ -74,7 +74,7 @@ Since `list-methods-lab3/` was supposed to fail, this means that now my bash scr
 
 
 
-4. Here is the code for the files that weren't edited at all:
+4.Here is the code for the files that weren't edited at all:
 
 ListExamples.java:
 ```
