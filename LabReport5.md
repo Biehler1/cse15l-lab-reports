@@ -72,6 +72,340 @@ __Student Response:__ Thank you! When I changed `cp lib grading-area/` to `cp -r
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/b458bef0-b042-4d96-a87e-ce8970679d60)
 Since `list-methods-lab3/` was supposed to fail, this means that now my bash script seems to work!
 
+
+
+Here is the code for the files that weren't edited at all:
+ListExamples.java:
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+
+
+}
+```
+
+GradeServer.java:
+```
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+class ExecHelpers {
+
+  /**
+    Takes an input stream, reads the full stream, and returns the result as a
+    string.
+
+    In Java 9 and later, new String(out.readAllBytes()) would be a better
+    option, but using Java 8 for compatibility with ieng6.
+  */
+  static String streamToString(InputStream out) throws IOException {
+    String result = "";
+    while(true) {
+      int c = out.read();
+      if(c == -1) { break; }
+      result += (char)c;
+    }
+    return result;
+  }
+
+  /**
+    Takes a command, represented as an array of strings as it would by typed at
+    the command line, runs it, and returns its combined stdout and stderr as a
+    string.
+  */
+  static String exec(String[] cmd) throws IOException {
+    Process p = new ProcessBuilder()
+                    .command(Arrays.asList(cmd))
+                    .redirectErrorStream(true)
+                    .start();
+    InputStream outputOfBash = p.getInputStream();
+    return String.format("%s\n", streamToString(outputOfBash));
+  }
+
+}
+
+class Handler implements URLHandler {
+    public String handleRequest(URI url) throws IOException {
+       if (url.getPath().equals("/grade")) {
+           String[] parameters = url.getQuery().split("=");
+           if (parameters[0].equals("repo")) {
+               String[] cmd = {"bash", "grade.sh", parameters[1]};
+               String result = ExecHelpers.exec(cmd);
+               return result;
+           }
+           else {
+               return "Couldn't find query parameter repo";
+           }
+       }
+       else {
+           return "Don't know how to handle that path!";
+       }
+    }
+}
+
+class GradeServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+class ExecExamples {
+  public static void main(String[] args) throws IOException {
+    String[] cmd1 = {"ls", "lib"};
+    System.out.println(ExecHelpers.exec(cmd1));
+
+    String[] cmd2 = {"pwd"};
+    System.out.println(ExecHelpers.exec(cmd2));
+
+    String[] cmd3 = {"touch", "a-new-file.txt"};
+    System.out.println(ExecHelpers.exec(cmd3));
+  }
+}
+
+```
+
+Server.java:
+```
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+class ExecHelpers {
+
+  /**
+    Takes an input stream, reads the full stream, and returns the result as a
+    string.
+
+    In Java 9 and later, new String(out.readAllBytes()) would be a better
+    option, but using Java 8 for compatibility with ieng6.
+  */
+  static String streamToString(InputStream out) throws IOException {
+    String result = "";
+    while(true) {
+      int c = out.read();
+      if(c == -1) { break; }
+      result += (char)c;
+    }
+    return result;
+  }
+
+  /**
+    Takes a command, represented as an array of strings as it would by typed at
+    the command line, runs it, and returns its combined stdout and stderr as a
+    string.
+  */
+  static String exec(String[] cmd) throws IOException {
+    Process p = new ProcessBuilder()
+                    .command(Arrays.asList(cmd))
+                    .redirectErrorStream(true)
+                    .start();
+    InputStream outputOfBash = p.getInputStream();
+    return String.format("%s\n", streamToString(outputOfBash));
+  }
+
+}
+
+class Handler implements URLHandler {
+    public String handleRequest(URI url) throws IOException {
+       if (url.getPath().equals("/grade")) {
+           String[] parameters = url.getQuery().split("=");
+           if (parameters[0].equals("repo")) {
+               String[] cmd = {"bash", "grade.sh", parameters[1]};
+               String result = ExecHelpers.exec(cmd);
+               return result;
+           }
+           else {
+               return "Couldn't find query parameter repo";
+           }
+       }
+       else {
+           return "Don't know how to handle that path!";
+       }
+    }
+}
+
+class GradeServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+class ExecExamples {
+  public static void main(String[] args) throws IOException {
+    String[] cmd1 = {"ls", "lib"};
+    System.out.println(ExecHelpers.exec(cmd1));
+
+    String[] cmd2 = {"pwd"};
+    System.out.println(ExecHelpers.exec(cmd2));
+
+    String[] cmd3 = {"touch", "a-new-file.txt"};
+    System.out.println(ExecHelpers.exec(cmd3));
+  }
+}
+```
+
+TestListExamples.java:
+```
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+class ExecHelpers {
+
+  /**
+    Takes an input stream, reads the full stream, and returns the result as a
+    string.
+
+    In Java 9 and later, new String(out.readAllBytes()) would be a better
+    option, but using Java 8 for compatibility with ieng6.
+  */
+  static String streamToString(InputStream out) throws IOException {
+    String result = "";
+    while(true) {
+      int c = out.read();
+      if(c == -1) { break; }
+      result += (char)c;
+    }
+    return result;
+  }
+
+  /**
+    Takes a command, represented as an array of strings as it would by typed at
+    the command line, runs it, and returns its combined stdout and stderr as a
+    string.
+  */
+  static String exec(String[] cmd) throws IOException {
+    Process p = new ProcessBuilder()
+                    .command(Arrays.asList(cmd))
+                    .redirectErrorStream(true)
+                    .start();
+    InputStream outputOfBash = p.getInputStream();
+    return String.format("%s\n", streamToString(outputOfBash));
+  }
+
+}
+
+class Handler implements URLHandler {
+    public String handleRequest(URI url) throws IOException {
+       if (url.getPath().equals("/grade")) {
+           String[] parameters = url.getQuery().split("=");
+           if (parameters[0].equals("repo")) {
+               String[] cmd = {"bash", "grade.sh", parameters[1]};
+               String result = ExecHelpers.exec(cmd);
+               return result;
+           }
+           else {
+               return "Couldn't find query parameter repo";
+           }
+       }
+       else {
+           return "Don't know how to handle that path!";
+       }
+    }
+}
+
+class GradeServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+class ExecExamples {
+  public static void main(String[] args) throws IOException {
+    String[] cmd1 = {"ls", "lib"};
+    System.out.println(ExecHelpers.exec(cmd1));
+
+    String[] cmd2 = {"pwd"};
+    System.out.println(ExecHelpers.exec(cmd2));
+
+    String[] cmd3 = {"touch", "a-new-file.txt"};
+    System.out.println(ExecHelpers.exec(cmd3));
+  }
+}
+
+```
+
 ## Part 2
 I think something cool that we learned was about the jdb. This is because back when I took AP Computer Science Principles in High School, the website (code.org) we coded on had a built in debugger that would go line by line through the code. In this 
 debugger you could implement "watchers" which would store the values of any variable you wanted and would show if and when they got updated in the code. It made debugging a lot easier. However, when I got to AP Computer Science A, this debugger 
