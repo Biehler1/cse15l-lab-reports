@@ -2,7 +2,7 @@
 ## Part 1
 1. __Title:__ Bug involving JUnit tests
 
-I'm facing an issue when running my bash script. It outputs these errors in the terminal. 
+I'm facing an issue when running my bash script. It outputs these errors in the terminal. I think this has to do with the JUnit tests not running.
 ![image](https://github.com/Biehler1/cse15l-lab-reports/assets/103413662/53ac9b25-5a9c-4dcd-b2c6-936ec59ed4aa)
 Here is the code for my bash script:
 ```
